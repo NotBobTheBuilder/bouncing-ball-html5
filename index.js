@@ -9,6 +9,11 @@ var canvas = document.getElementById("canvas"),
         "h": 20,
     };
 
+window.requestAnimationFrame = window.requestAnimationFrame
+                            || window.mozRequestAnimationFrame
+                            || window.webkitRequestAnimationFrame
+                            || window.msRequestAnimationFrame; 
+
 function tick() {
   blob.x = blob.x + blob.xd;
   blob.y = blob.y + blob.yd;
